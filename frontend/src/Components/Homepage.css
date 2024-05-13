@@ -2,6 +2,7 @@
 body{
   margin: 0;
 }
+
 nav {
   display: flex;
   padding: 0.2rem 0.3rem;
@@ -29,6 +30,7 @@ nav {
 
 .nav-links li {
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 .signin-button {
@@ -76,7 +78,6 @@ nav {
 footer {
   position: relative;
   z-index: 3;
-  margin-top: 100vh; 
 }
 
 .search-container button {
@@ -86,40 +87,45 @@ footer {
 .available-courses {
   padding: 50px;
   text-align: center;
+  margin-top: 90vh;
 }
 
 .course-tabs {
-  display: grid; /* Use grid layout */
-  grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
-  grid-template-rows: repeat(2, auto); /* 2 rows with auto height */
-  gap: 20px; /* Spacing between tabs */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
 }
 
 .course-tab {
   border: 1px solid #ddd;
-  padding: 15px; /* Reduced padding */
+  padding: 15px;
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, background-color 0.2s ease; 
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  text-decoration: none; 
 }
 
 .course-tab img {
   width: 100%;
   height: 80%;
   margin-bottom: 10px;
-  max-height: 50px; /* Limit image height */
+  max-height: 50px;
   object-fit: contain;
+}
+
+.course-tab p {
+  font-weight: bold;
+  font-size: 14px;
+  color: black; 
 }
 
 .course-tab:hover {
   transform: scale(1.1); /* Enlarge the tab slightly */
   background-color: #f0f0f0; /* Change background color on hover */
-}
-
-.course-tab p {
-  font-weight: bold;
-  font-size: 14px; /* Reduce font size if needed */
+  text-decoration: none;
+  font-size: 30px;
 }
 
 .about-us {
@@ -134,8 +140,7 @@ footer {
   position: absolute;
   top: 45%; /* Position the content 50% from the top */
   left: 20px; /* Position the content 20px from the right side */
-  transform: translateY(-50%); /* Center the content vertically */
-  text-align: right; /* Align the text to the right */
+  transform: translateY(-50%); /* Center the content vertically */ /* Align the text to the right */
   color: black; /* Text color */
   max-width: 50%; /* Set the maximum width of the content */
   padding: 20px; /* Adjust padding as needed */
@@ -150,3 +155,4 @@ footer {
   text-align: center;
   padding: 20px;
 }
+

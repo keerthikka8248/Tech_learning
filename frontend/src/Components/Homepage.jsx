@@ -1,6 +1,7 @@
 //Homepage.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink} from 'react-scroll';
+import { Link as RouterLink} from 'react-router-dom';
 import logo from '../images/logo-black.png';
 import html from '../images/HTML5.jpg';
 import css from '../images/CSS3.jpg';
@@ -18,25 +19,25 @@ function Homepage() {
     <nav>
       <ul className="nav-links">
         <li>
-          <Link to="/">
+          <ScrollLink to="heropage" smooth={true} duration={500}>
             <img src={logo} alt="Logo" style={{ width: '80px' }} /> 
-          </Link>
+          </ScrollLink>
         </li>
         <li>
-          <Link to="/">Home</Link> 
+          <RouterLink to="/">Home</RouterLink> 
         </li>
         <li>
-          <Link to="/courses">Courses</Link>
+          <ScrollLink to="availablecourses" smooth={true} duration={500}>Courses</ScrollLink>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <ScrollLink to="aboutus" smooth={true} duration={500}>About</ScrollLink>
         </li>
         <li>
-          <Link to="/login"><button className="signin-button">Login</button> </Link>
+          <RouterLink to="/login"><button className="signin-button">Login</button> </RouterLink>
         </li>
       </ul>
     </nav>
-     <div className="heropg">
+     <div id="heropage" className="heropg">
      <div className="catchy-phrase">
      <h1>Inspire Innovation, Ignite Your Passion</h1>
      <p>Explore our diverse range of courses designed to inspire innovation and ignite your passion for learning. Join us in unlocking your potential and making an impact.</p>
@@ -52,47 +53,62 @@ function Homepage() {
    </div>
    </div>
 
-  <section className="available-courses">
+  <section id="availablecourses" className="available-courses">
   <h2>Available Courses</h2>
   <div className="course-tabs">
-
+  <RouterLink to="/c-concepts-page" className="course-tab">
     <div className="course-tab">
       <img src={html} alt="HTML" />
       <p>HTML</p>
     </div>
+    </RouterLink>
+    <RouterLink to="/c-concepts-page" className="course-tab">
     <div className="course-tab">
       <img src={css} alt="CSS" />
       <p>CSS</p>
     </div>
+    </RouterLink>
+    <RouterLink to="/c-concepts-page" className="course-tab">
     <div className="course-tab">
       <img src={js} alt="JavaScript" />
       <p>JavaScript</p>
     </div>
+    </RouterLink>
+    <RouterLink to="/c-concepts-page" className="course-tab">
     <div className="course-tab">
       <img src={dsa} alt="DSA" />
       <p>DSA</p>
     </div>
+    </RouterLink>
+    <RouterLink to="/c-concepts-page" className="course-tab">
     <div className="course-tab">
       <img src={c} alt="C" />
       <p>C</p>
     </div>
+    </RouterLink>
+    <RouterLink to="/c-concepts-page" className="course-tab">
     <div className="course-tab">
       <img src={cpp} alt="C++" />
       <p>C++</p>
     </div>
+    </RouterLink>
+    <RouterLink to="/c-concepts-page" className="course-tab">
     <div className="course-tab">
       <img src={python} alt="Python" />
       <p>Python</p>
     </div>
+    </RouterLink>
+    <RouterLink to="/c-concepts-page" className="course-tab">
     <div className="course-tab">
       <img src={java} alt="Java" />
       <p>Java</p>
     </div>
+    </RouterLink>
     
   </div>
 </section>
 
-<section className="about-us">
+<section id="aboutus" className="about-us">
   <div className="about-content">
     <p>At SkillSpring, our mission is to empower individuals to reach their full potential in the ever-evolving world of technology. We believe that everyone should have access to high-quality, engaging, and personalized learning experiences that foster innovation and ignite a passion for lifelong learning.</p>
   </div>
