@@ -14,7 +14,7 @@ app.use(cors())
 
 const bcrypt = require('bcrypt');
 
-// **DB Connection** //
+
 
 const port = process.env.PORT || 8000
 
